@@ -24,10 +24,13 @@ namespace CollectionsSpeedCheck
                    + "0. Exit\n"
                    + "-------------------------------------------------");
         }
+
         public static int setQuantity()
         {
             int quantity = 0;
+
             Console.Write("Enter the number of elements to create in the lists (int): ");
+
             try
             {
                 quantity = int.Parse(Console.ReadLine());
@@ -41,34 +44,40 @@ namespace CollectionsSpeedCheck
             {
                 Console.WriteLine("Illegal input. Too big number entered. Int expected (" + e.Message + ")\n");
             }
+
             return quantity;
         }
 
         public static int setNewQuantity()
         {
             int newQuantity = 0;
+
             Console.Write("Enter the number of elements to add to the lists (int): ");
+
             try
             {
                 newQuantity = int.Parse(Console.ReadLine());
                 Console.Write("\n");
+
             }
             catch (FormatException e)
             {
                 Console.WriteLine("Illegal input. Number expcted (" + e.Message + ")\n");
             }
-
             catch (OverflowException e)
             {
                 Console.WriteLine("Illegal input. Too big number entered. Int expected (" + e.Message + ")\n");
             }
+
             return newQuantity;
         }
 
         public static int setValue()
         {
             int value = 0;
-            Console.Write("Enter the value (number less than quantity of objects): ");
+
+            Console.Write("Enter the value (less than number of elements): ");
+
             try
             {
                 value = int.Parse(Console.ReadLine());
@@ -78,14 +87,13 @@ namespace CollectionsSpeedCheck
             {
                 Console.WriteLine("Illegal input. Number expcted (" + e.Message + ")\n");
             }
-
             catch (OverflowException e)
             {
                 Console.WriteLine("Illegal input. Too big number entered. Int expected (" + e.Message + ")\n");
             }
+
             return value;
         }
-
     }
 }
 

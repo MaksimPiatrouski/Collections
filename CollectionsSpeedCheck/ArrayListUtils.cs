@@ -18,6 +18,7 @@ namespace CollectionsSpeedCheck
         public static ArrayList createArrayList(int quantity)
         {
             ArrayList testAL = new ArrayList();
+
             for (int i = 0; i < quantity; i++)
             {
                 var a = new Temp(i, i, i, i);
@@ -31,6 +32,7 @@ namespace CollectionsSpeedCheck
         {
             ArrayList testAL = new ArrayList();
             Console.WriteLine("Procesing (with ArrayList). Please wait... \n");
+
             stopWatchAL.Restart();
             for (int i = 0; i < quantity; i++)
             {
@@ -50,8 +52,10 @@ namespace CollectionsSpeedCheck
         public static void checkListInsertAtMiddleSpeed(int quantity, int newQuantity)
         {
             int mid = quantity / 2;
+
             ArrayList testAL = createArrayList(quantity);
             Console.WriteLine("Procesing (with ArrayList). Please wait... \n");
+
             stopWatchAL.Restart();
             for (int i = 0; i < newQuantity; i++)
             {
@@ -72,6 +76,7 @@ namespace CollectionsSpeedCheck
         {
             ArrayList testAL = createArrayList(quantity);
             Console.WriteLine("Procesing (with ArrayList). Please wait... \n");
+
             stopWatchAL.Restart();
             for (int i = 0; i < newQuantity; i++)
             {
@@ -94,7 +99,6 @@ namespace CollectionsSpeedCheck
             Console.WriteLine("Procesing (with ArrayList). Please wait... \n");
 
             stopWatchAL.Restart();
-
             foreach (Temp t in testAL)
             {
                 if (t.i1 == value)
@@ -112,7 +116,6 @@ namespace CollectionsSpeedCheck
 
             ArrayListUtils.printReportAL(elapsedTimeAL);
         }
-
 
         public static void checkListDeleteLastSpeed(int quantity)
         {

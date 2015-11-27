@@ -28,41 +28,70 @@ namespace CollectionsSpeedCheck
                 {
                     case "1":
                         quantity = Utils.setNewQuantity();
-                        ArrayListUtils.checkEmptyListAddSpeed(quantity);
-                        LinkedListUtils.checkEmptyListAddSpeed(quantity);
+                        if (quantity != 0)
+                        {
+                            ArrayListUtils.checkEmptyListAddSpeed(quantity);
+                            LinkedListUtils.checkEmptyListAddSpeed(quantity);
+                        }
                         break;
+
                     case "2":
                         quantity = Utils.setQuantity();
                         newQuantity = Utils.setNewQuantity();
-                        ArrayListUtils.checkListInsertAtMiddleSpeed(quantity, newQuantity);
-                        LinkedListUtils.checkListInsertAtMiddleSpeed(quantity, newQuantity);
+                        if (quantity != 0 && newQuantity != 0)
+                        {
+                            ArrayListUtils.checkListInsertAtMiddleSpeed(quantity, newQuantity);
+                            LinkedListUtils.checkListInsertAtMiddleSpeed(quantity, newQuantity);
+                        }
+
                         break;
+
                     case "3":
                         quantity = Utils.setQuantity();
                         newQuantity = Utils.setNewQuantity();
-                        ArrayListUtils.checkListInsertAtBeginningSpeed(quantity, newQuantity);
-                        LinkedListUtils.checkListInsertAtBeginningSpeed(quantity, newQuantity);
+                        if (quantity != 0 && newQuantity != 0)
+                        {
+                            ArrayListUtils.checkListInsertAtBeginningSpeed(quantity, newQuantity);
+                            LinkedListUtils.checkListInsertAtBeginningSpeed(quantity, newQuantity);
+                        }
                         break;
+
                     case "4":
                         quantity = Utils.setQuantity();
                         value = Utils.setValue();
-                        ArrayListUtils.listFindObjectSpeed(quantity, value);
-                        LinkedListUtils.listFindObjectSpeed(quantity, value);
+                        if (quantity != 0 && value != 0)
+                        {
+                            ArrayListUtils.listFindObjectSpeed(quantity, value);
+                            LinkedListUtils.listFindObjectSpeed(quantity, value);
+                        }
                         break;
+
                     case "5":
+
                         quantity = Utils.setQuantity();
-                        ArrayListUtils.checkListDeleteLastSpeed(quantity);
-                        LinkedListUtils.checkListDeleteLastSpeed(quantity);
+                        if (quantity != 0)
+                        {
+                            ArrayListUtils.checkListDeleteLastSpeed(quantity);
+                            LinkedListUtils.checkListDeleteLastSpeed(quantity);
+                        }
                         break;
+
                     case "6":
                         quantity = Utils.setQuantity();
-                        ArrayListUtils.checkListDeleteMidSpeed(quantity);
-                        LinkedListUtils.checkListDeleteMidSpeed(quantity);
+                        if (quantity != 0)
+                        {
+                            ArrayListUtils.checkListDeleteMidSpeed(quantity);
+                            LinkedListUtils.checkListDeleteMidSpeed(quantity);
+                        }
                         break;
+
                     case "7":
                         quantity = Utils.setQuantity();
-                        ArrayListUtils.checkListDeleteFirstSpeed(quantity);
-                        LinkedListUtils.checkListDeleteFirstSpeed(quantity);
+                        if (quantity != 0)
+                        {
+                            ArrayListUtils.checkListDeleteFirstSpeed(quantity);
+                            LinkedListUtils.checkListDeleteFirstSpeed(quantity);
+                        }
                         break;
 
                     case "0":

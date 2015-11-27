@@ -18,6 +18,7 @@ namespace CollectionsSpeedCheck
         public static LinkedList<Temp> createLinkedList(int quantity)
         {
             LinkedList<Temp> testLL = new LinkedList<Temp>();
+
             for (int i = 0; i < quantity; i++)
             {
                 var a = new Temp(i, i, i, i);
@@ -30,14 +31,15 @@ namespace CollectionsSpeedCheck
         {
             LinkedList<Temp> testLL = new LinkedList<Temp>();
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
-            stopWatchLL.Restart();
 
+            stopWatchLL.Restart();
             for (int i = 0; i < quantity; i++)
             {
                 var a = new Temp(i, i, i, i);
                 testLL.AddLast(a);
             }
             stopWatchLL.Stop();
+
             tsLL = stopWatchLL.Elapsed;
 
             string elapsedTimeLL = String.Format("{0:00}.{1:000}",
@@ -48,13 +50,12 @@ namespace CollectionsSpeedCheck
 
         public static void checkListInsertAtMiddleSpeed(int quantity, int newQuantity)
         {
-            
             int mid = quantity / 2;
 
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
-            stopWatchLL.Restart();
 
+            stopWatchLL.Restart();
             var curNode = testLL.First;
             for (var k = 0; k < mid; k++)
             {
@@ -65,8 +66,8 @@ namespace CollectionsSpeedCheck
                 var a = new Temp(i, i, i, i);
                 testLL.AddAfter(curNode, a);
             }
-
             stopWatchLL.Stop();
+
             tsLL = stopWatchLL.Elapsed;
 
             string elapsedTimeLL = String.Format("{0:00}.{1:000}",
@@ -79,6 +80,7 @@ namespace CollectionsSpeedCheck
         {
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
+
             stopWatchLL.Restart();
             var curNode = testLL.First;
             for (int i = 0; i < newQuantity; i++)
@@ -86,7 +88,6 @@ namespace CollectionsSpeedCheck
                 var a = new Temp(i, i, i, i);
                 testLL.AddAfter(curNode, a);
             }
-
             stopWatchLL.Stop();
 
             tsLL = stopWatchLL.Elapsed;
@@ -101,8 +102,8 @@ namespace CollectionsSpeedCheck
         {
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
-            stopWatchLL.Restart();
 
+            stopWatchLL.Restart();
             foreach (Temp t in testLL)
             {
                 if (t.i1 == value)
@@ -111,8 +112,8 @@ namespace CollectionsSpeedCheck
                     break;
                 }
             }
-
             stopWatchLL.Stop();
+
             tsLL = stopWatchLL.Elapsed;
 
             string elapsedTimeLL = String.Format("{0:00}.{1:000}",
@@ -123,9 +124,10 @@ namespace CollectionsSpeedCheck
 
 
         public static void checkListDeleteLastSpeed(int quantity)
-        { 
+        {
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
+
             stopWatchLL.Restart();
             testLL.RemoveLast();
             stopWatchLL.Stop();
@@ -144,15 +146,16 @@ namespace CollectionsSpeedCheck
 
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
+
             stopWatchLL.Restart();
-            Temp objToRemove = testLL.ElementAt(mid);
-            testLL.Remove(objToRemove);
+            testLL.Remove(testLL.ElementAt(mid));
             stopWatchLL.Stop();
 
             tsLL = stopWatchLL.Elapsed;
 
             string elapsedTimeLL = String.Format("{0:00}.{1:000}",
                 tsLL.Seconds, tsLL.Milliseconds);
+
             LinkedListUtils.printReportLL(elapsedTimeLL);
         }
 
@@ -160,6 +163,7 @@ namespace CollectionsSpeedCheck
         {
             LinkedList<Temp> testLL = createLinkedList(quantity);
             Console.WriteLine("Procesing (with LinkedList). Please wait... \n");
+
             stopWatchLL.Restart();
             testLL.RemoveFirst();
             stopWatchLL.Stop();
@@ -168,6 +172,7 @@ namespace CollectionsSpeedCheck
 
             string elapsedTimeLL = String.Format("{0:00}.{1:000}",
                  tsLL.Seconds, tsLL.Milliseconds);
+
             LinkedListUtils.printReportLL(elapsedTimeLL);
         }
 
