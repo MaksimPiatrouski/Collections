@@ -1,0 +1,6 @@
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\bin\Debug\CollectionsSpeedCheck.exe.config
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\bin\Debug\CollectionsSpeedCheck.exe
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\bin\Debug\CollectionsSpeedCheck.pdb
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\obj\Debug\CollectionsSpeedCheck.csprojResolveAssemblyReference.cache
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\obj\Debug\CollectionsSpeedCheck.exe
+C:\workspace\CSharp\projects\CollectionsSpeedCheck\CollectionsSpeedCheck\obj\Debug\CollectionsSpeedCheck.pdb
