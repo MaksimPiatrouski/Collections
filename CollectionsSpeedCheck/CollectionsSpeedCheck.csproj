@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListUtils.cs" />
+    <Compile Include="ArrayListUtils.cs" />
+    <Compile Include="LinkedListUtils.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Temp.cs" />
